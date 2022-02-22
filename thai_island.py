@@ -17,38 +17,32 @@ def menu():
 def gallery():
     return render_template('gallery.html', nav_links=get_nav_links())
 
-@app.route("/form")
-def form():
-    return render_template('form.html', title="User form!",
-                           nav_links=get_nav_links())
+@app.route("/contact")
+def contact():
+    return render_template('contact.html', nav_links=get_nav_links())
 
 
 @app.route("/process", methods=['POST', 'GET'])
 def process_form():
     if request.method == 'GET':
-        return render_template('bootstrap.html', title='Invalid form access',
-                               content='You attempted to access the form URL directly. Try visiting /form and submitting!',
-                               nav_links=get_nav_links())
+        return render_template('invalid_access.html', nav_links=get_nav_links())
     if request.method == 'POST':
         form_data = request.form
-        user = ""
-        passwd = ""
+        name = ""
+        message = ""
         for key, value in form_data.items():
-            if key == "user":
-                user = value
-            if key == "passwd":
-                passwd = value
-        return render_template('bootstrap.html', title='Form submitted',
-                               content=("Hello %s. Your password is %s." % (user, passwd)), nav_links=get_nav_links())
+            if key == "name":
+                name = value
+            if key == "message":
+                message = value
+        return render_template('process.html', nav_links=get_nav_links())
 
 
 def get_nav_links():
     return {
         "Menu": "/menu",
-        "Gallery": "/gallery"
-        # "Menu": "/menu",
-        # "Now!": "/now",
-        # "Form": "/form"
+        "Gallery": "/gallery",
+        "Contact Us": "/contact"
     }
 
 

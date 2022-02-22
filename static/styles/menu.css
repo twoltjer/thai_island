@@ -20,3 +20,16 @@
 .menu-section > h2 {
     margin-top: 1em;
 }
+
+.label {
+    padding-right: 1em;
+    font-weight: bold;
+}
+
+input, textarea, .label {
+    margin-bottom: 1em;
+}
+
+.menu-column input, .menu-column textarea {
+    width: 100%;
+}

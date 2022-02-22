@@ -1,0 +1,26 @@
+{% extends "bootstrap.html" %}
+{% block title %}Contact Us{% endblock %}
+{% block pagetitle %}Contact Us{% endblock %}
+{% block style %}<link href="/static/styles/menu.css" rel="stylesheet" type="text/css" />{% endblock %}
+{% block content %}
+<p><b>Hours of operation:</b></p>
+<p>Mon-Fri: 10 AM - 9 PM</p>
+<p>Sat: 10 AM - 3 PM</p>
+
+
+<form action="/process" method = "POST">
+    <div class="menu-section">
+        <div class="menu-columns">
+            <div class="menu-column menu-column-right">
+                <p class="label">Name</p>
+                <p class="label">Message</p>
+            </div>
+            <div class="menu-column menu-column-left">
+                <input type = "text" name = "name" />
+                <textarea name = "message" ></textarea>
+            </div>
+        </div>
+            <p><input type = "submit" value = "Submit" /></p>
+    </div>
+</form>
+{% endblock %}
