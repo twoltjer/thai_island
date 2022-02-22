@@ -1,0 +1,10 @@
+<html>
+	<body>
+	<h1>Hi</h1>
+	<ul>
+	{% for label,address in nav_links.items() %}
+	<li>{{ label }}: {{ address }}</li>
+	{% endfor %}
+	</ul>
+	</body>
+</html>
