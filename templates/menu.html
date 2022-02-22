@@ -1,8 +1,77 @@
 {% extends "bootstrap.html" %}
 {% block title %}Menu{% endblock %}
 {% block pagetitle %}Our delicious meals{% endblock %}
+{% block style %}<link href="/static/styles/menu.css" rel="stylesheet" type="text/css" />{% endblock %}
 {% block content %}
-<div>
-    <a href="/">This is a link</a>
+<div class="menu-section">
+    <h2>Appetizers</h2>
+    <div class="menu-columns">
+        <div class="menu-column menu-column-left">
+            <p>Veggie Roll (1)</p>
+            <p>Crab Rangoon (5)</p>
+        </div>
+        <div class="menu-column menu-column-right">
+            <p>$1.50</p>
+            <p>$4.00</p>
+        </div>
+    </div>
+</div>
+<div class="menu-section">
+    <h2>Soups</h2>
+    <div class="menu-columns">
+        <div class="menu-column menu-column-left">
+            <p>Tom Yum</p>
+            <p>Noodle Soup</p>
+        </div>
+        <div class="menu-column menu-column-right">
+            <p>$8.95</p>
+            <p>$8.95</p>
+        </div>
+    </div>
+</div>
+<div class="menu-section">
+    <h2>Fried Rice</h2>
+    <div class="menu-columns">
+        <div class="menu-column menu-column-left">
+            <p>Fried Rice</p>
+            <p>Bangkok Fried Rice</p>
+            <p>Curry Fried Rice</p>
+        </div>
+        <div class="menu-column menu-column-right">
+            <p>$8.95</p>
+            <p>$9.95</p>
+            <p>$9.95</p>
+        </div>
+    </div>
+</div>
+<div class="menu-section">
+    <h2>Noodles</h2>
+    <div class="menu-columns">
+        <div class="menu-column menu-column-left">
+            <p>Pad Thai</p>
+            <p>Pad Seew</p>
+            <p>Curry Pad Thai</p>
+            <p>Drunken Noodle</p>
+        </div>
+        <div class="menu-column menu-column-right">
+            <p>$9.95</p>
+            <p>$9.95</p>
+            <p>$9.95</p>
+            <p>$9.95</p>
+        </div>
+    </div>
+</div>
+<div class="menu-section">
+    <h2>Chef's Specialties</h2>
+    <div class="menu-columns">
+        <div class="menu-column menu-column-left">
+            <p>Sesame Chicken</p>
+            <p>House Special</p>
+        </div>
+        <div class="menu-column menu-column-right">
+            <p>$12.95</p>
+            <p>$14.35</p>
+        </div>
+    </div>
 </div>
 {% endblock %}

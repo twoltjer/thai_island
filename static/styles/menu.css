@@ -1,0 +1,22 @@
+.menu-columns
+{
+    display: flex;
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu-column {
+    width: 50%;
+}
+.menu-column-left {
+    text-align: left;
+}
+.menu-column-right {
+    text-align: right;
+}
+.menu-section {
+    text-align: center;
+}
+.menu-section > h2 {
+    margin-top: 1em;
+}
