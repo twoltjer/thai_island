@@ -5,12 +5,16 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def home():
-    return render_template('bootstrap.html', title="Home", content="Hi, welcome to this boot-flask site!",
-                           nav_links=get_nav_links())
+def splash():
+    return render_template('splash.html')
+
+@app.route("/menu")
+def menu():
+    return render_template('menu.html', nav_links=get_nav_links())
 
 
-@app.route("/now")
+
+@app.route("/menu")
 def now():
     return render_template('bootstrap.html', title="Current date and time", content="Hello user, the current time and date are %s" % datetime.now().strftime("%m/%d/%Y %H:%M:%S"),
                            nav_links=get_nav_links())
@@ -43,9 +47,10 @@ def process_form():
 
 def get_nav_links():
     return {
-        "Home": "/",
-        "Now!": "/now",
-        "Form": "/form"
+        "Menu": "/menu"
+        # "Menu": "/menu",
+        # "Now!": "/now",
+        # "Form": "/form"
     }
 
 
