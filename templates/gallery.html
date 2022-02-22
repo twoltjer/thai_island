@@ -1,0 +1,36 @@
+{% extends "bootstrap.html" %}
+{% block title %}Gallery{% endblock %}
+{% block pagetitle %}Gallery{% endblock %}
+{% block style %}<link href="/static/styles/gallery.css" rel="stylesheet" type="text/css" />{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="column">
+        <div>
+            <img src="/static/images/tom-yum.jpg" alt="Tom Yum Soup" />
+            Tom Yum Soup
+        </div>
+        <div>
+        <img src="/static/images/veggie-roll.jpg" alt="Veggie Rolls" />
+            Veggie Rolls
+            </div>
+        <div>
+        <img src="/static/images/curry-fried-rice.jpg" alt="Curry Fried Rice" />
+            Curry Fried Rice
+            </div>
+    </div>
+    <div class="column">
+        <div>
+        <img src="/static/images/curry-pad-thai.jpg" alt="Curry Pad Thai" />
+            Curry Pad Thai
+            </div>
+        <div>
+      <img src="/static/images/sesame-chicken.jpg" alt="Sesame Chicken" />
+            Sesame Chicken
+            </div>
+        <div>
+      <img src="/static/images/drunken-noodle.png" alt="Drunken Noodle Soup" />
+                Drunken Noodle Soup
+        </div>
+  </div>
+</div>
+{% endblock %}

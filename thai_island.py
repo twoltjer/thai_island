@@ -13,12 +13,9 @@ def menu():
     return render_template('menu.html', nav_links=get_nav_links())
 
 
-
-@app.route("/menu")
-def now():
-    return render_template('bootstrap.html', title="Current date and time", content="Hello user, the current time and date are %s" % datetime.now().strftime("%m/%d/%Y %H:%M:%S"),
-                           nav_links=get_nav_links())
-
+@app.route("/gallery")
+def gallery():
+    return render_template('gallery.html', nav_links=get_nav_links())
 
 @app.route("/form")
 def form():
@@ -47,7 +44,8 @@ def process_form():
 
 def get_nav_links():
     return {
-        "Menu": "/menu"
+        "Menu": "/menu",
+        "Gallery": "/gallery"
         # "Menu": "/menu",
         # "Now!": "/now",
         # "Form": "/form"
